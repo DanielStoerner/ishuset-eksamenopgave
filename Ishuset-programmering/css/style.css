@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+/* tilpasset scroll, så når man trykker på menu links */
+html{
+    scroll-behavior: smooth;
+}
+
+/* tilpasset scroll bar (farven ændres) */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(99, 140, 185);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(99, 140, 185);
+}
+
+/* max width på menubaren */
+
+.max-width{
+    max-width: 2200px;
+    padding: 0 80px;    
+    margin: auto;
+}
+/* media query til computer skærm */
+
+@media (max-width: 1920px){
+    
+/* navbar */ 
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: "Coolvetica Bk";
+    transition: all 1s ease;
+    display: flex;
+}
+.navbar.sticky{
+    padding: 5px 0;
+    background-color: rgb(99, 140, 185);
+    background-size: 80%;
+    
+
+
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+}
+.navbar .logo a{
+    color: rgb(255, 255, 255);
+    font-size: 5px;
+    font-weight: 600;
+}
+.navbar .logo a span{
+    color: rgb(14, 13, 13);
+    transition: all 0.3s ease;
+}
+.navbar.sticky .logo a span{
+    color: #fff;
+}
+
+.logo img{
+    width:18%
+}
+
+ul{
+    display: inline-flex;
+
+}
+
+
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    display: block;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color: rgb(0, 0, 0);
+}
+.navbar.sticky .menu li a:hover{
+    color: #fff;
+}
+/* farven bag ved main farven på hele dokumentet */
+body{ 
+    background-color: #89b3cf;  
+}
+
+/* Headerbilledet */
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background: rgb(195,195,195);
+background-image: linear-gradient(180deg,  rgba(153, 148, 148, 0.866) 0%, rgba(136, 136, 136, 0.521) 0%),url(../images/header-billede.jpg); 
+    background-position: center;
+background-size: cover;
+position: relative;
+background-attachment: fixed;
+
+
+}
+
+.text-box{
+    width: 90%;
+    color: rgba(255, 255, 255, 0.774);
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-5%);
+    text-align: center;
+    
+}
+
+/* tekst på headerbilledet */
+
+.text-box h2{
+    font-family: "Coolvetica Bk";
+font-size: 60px;
+color: white;
+
+}
+
+
+/* styling af knappen som bliver brugt hele vejen igennem siden */
+
+.knap{
+    display: inline-block;
+    text-decoration: none;
+    color: aliceblue;
+    border: 1px solid aliceblue;
+    padding: 20px 80px;
+    font-size: 16px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    margin-top: 40px;
+    border-radius: 10px;
+    
+}
+
+.knap:hover{
+    border: 1px solid rgba(247, 247, 247, 0.377);
+    background: rgba(173, 173, 173, 0.322);
+    transition: 0.5s;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.74);
+}
+
+}
